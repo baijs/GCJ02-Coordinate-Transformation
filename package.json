@@ -1,0 +1,20 @@
+{
+  "name": "GCJ02-Coordinate-Transformation",
+  "version": "1.0.0",
+  "description": "Coordinate transformation between GCJ02 and WGS84.",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "gcj02-trans": "./bin/conversion.js"
+  },
+  "keywords": [
+    "GCJ02",
+    "WGS84",
+    "coordinates"
+  ],
+  "author": "baijs",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}
