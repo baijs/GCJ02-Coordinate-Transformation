@@ -1,6 +1,11 @@
 {
   "name": "gcj-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/baijs/GCJ02-Coordinate-Transformation.git"
+  },
   "description": "Coordinate transformation between GCJ02 and WGS84.",
   "main": "index.js",
   "scripts": {},
