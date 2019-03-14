@@ -1,11 +1,11 @@
 {
-  "name": "GCJ02-Coordinate-Transformation",
+  "name": "gcj-tool",
   "version": "1.0.0",
   "description": "Coordinate transformation between GCJ02 and WGS84.",
   "main": "index.js",
   "scripts": {},
   "bin": {
-    "gcj02-trans": "./bin/conversion.js"
+    "gcj-tool": "./bin/conversion.js"
   },
   "keywords": [
     "GCJ02",

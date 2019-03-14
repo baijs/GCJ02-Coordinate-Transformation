@@ -1,7 +1,7 @@
 const fs = require('fs')
 const { GCJ02ToWGS84, WGS84ToGCJ02 } = require('./lib/conversion')
 
-function main(inputPath, outputPath, GCJ02, WGS84) {
+function transfer(inputPath, outputPath, GCJ02, WGS84) {
     const fileData = fs.readFileSync(inputPath, "utf-8");
     let geo = JSON.parse(fileData);
     geo.features.map((data) => {
@@ -26,4 +26,11 @@ function main(inputPath, outputPath, GCJ02, WGS84) {
     fs.writeFileSync(outputPath, JSON.stringify(geo), "utf-8");
 }
 
-exports.main = main;
+function gcj2wgs(inputPath, outputPath) {
+    transfer(inputPath, outputPath, true, false);
+}
+function wgs2gcj(inputPath, outputPath) {
+    transfer(inputPath, outputPath, false, true);
+}
+exports.gcj2wgs = gcj2wgs;
+exports.wgs2gcj = wgs2gcj;
