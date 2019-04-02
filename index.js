@@ -19,6 +19,16 @@ function transfer(inputPath, outputPath, GCJ02, WGS84) {
                     })
                 })
                 break;
+            case 'MultiPolygon':
+                // 4层
+                data.geometry.coordinates = data.geometry.coordinates.map(l2 => {
+                    return l2.map(l3 => {
+                        return l3.map(l4 => {
+                            return GCJ02 ? GCJ02ToWGS84(...l4) : WGS84 ? WGS84ToGCJ02(...l4) : null;
+                        });
+                    });
+                });
+                break;
             default:
                 throw new Error("Unexpected error")
         }
